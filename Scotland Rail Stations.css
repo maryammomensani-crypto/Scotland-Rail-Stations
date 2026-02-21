@@ -1,0 +1,117 @@
+:root {
+  --sidebar-width: 350px;
+  --sidebar-bg: #f5f5f5;
+  --sidebar-shadow: 2px 0 6px rgba(0,0,0,0.1);
+  --primary-color: #1f4e79;
+  --accent-color: #08306b;
+  --legend-bg: #ffffff;
+  --legend-shadow: 0 0 10px rgba(0,0,0,0.1);
+  --font-family: Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
+}
+
+#sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  box-shadow: var(--sidebar-shadow);
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+.title-box {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 18px 20px;
+}
+
+.title-box h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title-box p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 15px;
+  margin: 16px;
+  line-height: 1.4;
+}
+
+#listings {
+  padding: 0 16px;
+}
+
+.item {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background-color: #e6eef5;
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+#legend {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  background: var(--legend-bg);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: var(--legend-shadow);
+  font-size: 13px;
+  min-width: 160px;
+}
+
+#legend h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#legendContent > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
